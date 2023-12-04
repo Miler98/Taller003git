@@ -104,15 +104,17 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    function convertToCelsius() {
+        let fahrenheit = parseFloat(tela.value);
+        if (!isNaN(fahrenheit)) {
+          let celsius = (fahrenheit - 32) * 5/9;
+          tela.value = celsius.toFixed(2) + '°C';
+        } 
+        else {
+          tela.value = 'Error';
+        }
+    }
 });
 
-function convertToCelsius() {
-    let fahrenheit = parseFloat(tela.value);
-    if (!isNaN(fahrenheit)) {
-      let celsius = (fahrenheit - 32) * 5/9;
-      tela.value = celsius.toFixed(2) + ' °C';
-    } else {
-      tela.value = 'Error';
-    }
-  }
+
   
